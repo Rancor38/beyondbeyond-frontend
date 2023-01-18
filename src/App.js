@@ -23,14 +23,17 @@ const App = () => {
   const searchUrl = `http://localhost:4000/monster/name/${searchInput}`;
 
   const fetchSearch = () => {
-    if (searchInput.length < 2) {
-      return
+    if (searchInput.length <= 1) {
+      axios
+        .get(url)
+        .then(res => {
+          setSearchResult(res.data)
+        })
     }
     else {
       axios
         .post(searchUrl)
         .then(res => {
-          console.log(res?.data)
           setSearchResult(res.data)
         })
     }
@@ -39,6 +42,7 @@ const App = () => {
   const handleChange = (e) => {
     e.preventDefault();
     setSearchInput(e.target.value);
+    console.log(searchInput)
     fetchSearch();
   };
   const resetChange = () => {
