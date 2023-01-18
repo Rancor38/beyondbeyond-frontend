@@ -23,9 +23,11 @@ const Header = (props) => {
           />
         </motion.div>
 
-        <motion.h2 whileHover={{ scale: 1.05 }} whileTap={{ opacity: 0 }}>
-          <Link to="/about">About</Link>
-        </motion.h2>
+        <div className="about-and-addmonster">
+          <motion.h2 whileHover={{ scale: 1.05 }} whileTap={{ opacity: 0 }}>
+            <Link to="/about">About</Link>
+          </motion.h2>
+        </div>
       </header>
     </>
   );

@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import About from "./components/About";
 import { useState } from "react";
 import NotFoundPage from "./components/NotFoundPage";
+import MonsterEditor from "./components/monsterEditor/MonsterEditor";
 import axios from "axios";
 
 const App = () => {
@@ -24,25 +25,20 @@ const App = () => {
 
   const fetchSearch = () => {
     if (searchInput.length <= 1) {
-      axios
-        .get(url)
-        .then(res => {
-          setSearchResult(res.data)
-        })
-    }
-    else {
-      axios
-        .post(searchUrl)
-        .then(res => {
-          setSearchResult(res.data)
-        })
+      axios.get(url).then((res) => {
+        setSearchResult(res.data);
+      });
+    } else {
+      axios.post(searchUrl).then((res) => {
+        setSearchResult(res.data);
+      });
     }
   };
 
   const handleChange = (e) => {
     e.preventDefault();
     setSearchInput(e.target.value);
-    console.log(searchInput)
+    console.log(searchInput);
     fetchSearch();
   };
   const resetChange = () => {
@@ -65,6 +61,7 @@ const App = () => {
             path="/"
             element={<Cards url={url} searchResult={searchResult} />}
           />
+          <Route path="/monster/:id" element={<MonsterEditor />} />
           <Route path="/about" element={<About />} />
         </Routes>
       </>

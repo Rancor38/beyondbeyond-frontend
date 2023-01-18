@@ -1,7 +1,8 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import dot from "../components/static-images/3-dots-bounce.svg";
 import NotFoundPage from "./NotFoundPage";
+import AddMonsterButton from "./addMonster/AddMonsterButton";
 import { motion } from "framer-motion";
 import axios from "axios";
 
@@ -50,6 +51,10 @@ const Cards = (props) => {
   }
 
   return (
+    <>
+    <motion.h2 whileHover={{ scale: 1.05 }} whileTap={{ opacity: 0 }} className="monsterButtonMover">
+            <AddMonsterButton/>
+          </motion.h2>
     <section className="container">
       {monsters.map((monster, index) => {
         if (!monster) {
@@ -62,7 +67,7 @@ const Cards = (props) => {
         }
         return (
           // A Link to stats/the name of the monster unless its succubus because the name succubus/incubus breaks it, so when it sees that it'll turn it into 'succubus'
-          <motion.a
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.05 }}
@@ -71,6 +76,7 @@ const Cards = (props) => {
             className="read-more"
             key={index}
           >
+            <Link to={`/monster/${monster._id}`}>
             <div className="card-image">
               <img src={monster.image} alt={monster.name} className="card-art"/>
             </div>
@@ -80,10 +86,12 @@ const Cards = (props) => {
                 {monster?.size} {monster?.type} {monster.cr ? "CR " + monster.cr : ""}
               </h4>
             </div>
-          </motion.a>
+            </Link>
+          </motion.div>
         );
       })}
     </section>
+    </>
   );
 };
 
