@@ -1,8 +1,7 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-import dot from "../components/static-images/3-dots-bounce.svg";
-import NotFoundPage from "./NotFoundPage";
-import AddMonsterButton from "./addMonster/AddMonsterButton";
+import dot from "../static-images/3-dots-bounce.svg";
+import AddMonsterButton from "../components/addMonster/AddMonsterButton";
 import { motion } from "framer-motion";
 import axios from "axios";
 
@@ -14,12 +13,6 @@ const Cards = (props) => {
   //Creating some State
   //State for all the monsters
   const [monsters, setMonsters] = useState(null);
-
-  const errorFunction = () => {
-    <Routes>
-      <Route path="*" element={<NotFoundPage />} />
-    </Routes>;
-  };
 
   //the master fetch
   useEffect(() => {
@@ -55,7 +48,7 @@ const Cards = (props) => {
     <motion.h2 whileHover={{ scale: 1.05 }} whileTap={{ opacity: 0 }} className="monsterButtonMover">
             <AddMonsterButton/>
           </motion.h2>
-    <section className="container">
+    <section className="card-container">
       {monsters.map((monster, index) => {
         if (!monster) {
           return (

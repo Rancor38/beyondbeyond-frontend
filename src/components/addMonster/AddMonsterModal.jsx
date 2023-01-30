@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { motion } from 'framer-motion';
-import MonsterModalBackdrop from './MonsterModalBackdrop';
+import MonsterModalBackdrop from '../ModalBackdrop';
 
 const dropIn = {
     hidden: {

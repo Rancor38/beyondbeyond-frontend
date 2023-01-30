@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { Card } from 'react-bootstrap';
 import { motion } from 'framer-motion';
-import MonsterEditorModal from './MonsterEditorModal';
+import MonsterEditorModal from '../components/editMonster/MonsterEditorModal';
 
 const MonsterEditor = ({ match }) => {
     const { id } = useParams()
@@ -35,13 +35,13 @@ const MonsterEditor = ({ match }) => {
 
     return (
         <section>
-                    <div className='monsterEditorView'>
+                    <div>
                         <Card onDoubleClick={open}>
                     <Card.Title>{monster.name}</Card.Title>
                     <Card.Body className='monsterText'>{monster.description}</Card.Body>
-                    <Card.Img src={monster.image} alt={monster.name} className="card-art-big"/>
+                    <Card.Img src={monster.image} alt={monster.name} className="monster-art-big"/>
                         </Card>
-                        <div className='monsterEditorEditDeleteButtons'>
+                        <div>
                                 <motion.button
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
@@ -49,7 +49,6 @@ const MonsterEditor = ({ match }) => {
                             >
                                 Edit
                             </motion.button>
-                                <span className='spacer'></span>
                             <motion.button
                                 className='danger'
                                 whileHover={{ scale: 1.1 }}

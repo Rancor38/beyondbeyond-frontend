@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
-import EditorBackdrop from './EditorBackdrop';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
+import MonsterModalBackdrop from '../ModalBackdrop';
 
 const dropIn = {
     hidden: {
@@ -50,7 +50,7 @@ const MonsterEditorModal = ({ handleClose, monster, setMonster }) => {
     }
 
     return (
-        <EditorBackdrop onClick={handleClose}>
+        <MonsterModalBackdrop onClick={handleClose}>
             <motion.div
                 onClick={(e) => e.stopPropagation()}
                 className='modal edit-form'
@@ -93,7 +93,7 @@ const MonsterEditorModal = ({ handleClose, monster, setMonster }) => {
                     </form>
                 
             </motion.div>
-        </EditorBackdrop>
+        </MonsterModalBackdrop>
     );
 };
 

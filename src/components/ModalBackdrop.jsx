@@ -1,10 +1,11 @@
-import { motion } from "framer-motion";
+import React from 'react';
+import { motion } from 'framer-motion'
 
-const EditorBackdrop = ({ children, onClick }) => {
+const MonsterModalBackdrop = ({ children, onClick }) => {
     
     return (
         <motion.div
-            className='Backdrop'
+            className='modal-backdrop'
             onClick={onClick
             }
             initial={{ opacity: 0 }}
@@ -17,4 +18,4 @@ const EditorBackdrop = ({ children, onClick }) => {
     );
 };
 
-export default EditorBackdrop;
+export default MonsterModalBackdrop;

@@ -1,21 +1,16 @@
 import { Route, Routes } from "react-router-dom";
-import Cards from "./components/Cards";
+import Cards from "./pages/Cards";
 import Header from "./components/Header";
-import About from "./components/About";
+import About from "./pages/About";
 import { useState } from "react";
-import NotFoundPage from "./components/NotFoundPage";
-import MonsterEditor from "./components/monsterEditor/MonsterEditor";
+import MonsterEditor from "./pages/Monster";
+import './stylesheets/index.css'
 import axios from "axios";
 
 const App = () => {
   // Const variables for the SRD Monsters, these will be passed down as props to the Cards component as 'url'.
   const url = "http://localhost:4000/monster/";
 
-  const errorFunction = () => {
-    <Routes>
-      <Route path="*" element={<NotFoundPage />} />
-    </Routes>;
-  };
 
   // set search's state
   const [searchInput, setSearchInput] = useState("");
@@ -47,14 +42,14 @@ const App = () => {
   };
 
   return (
-    <div className="App">
+    <div className="app">
       {/* Printing the Header Component within the App */}
       <Header
         handleChange={handleChange}
         searchInput={searchInput}
         resetChange={resetChange}
       />
-      <>
+      
         {/* Printing the Card element for each page of results from the API, with each having a route */}
         <Routes>
           <Route
@@ -64,8 +59,7 @@ const App = () => {
           <Route path="/monster/:id" element={<MonsterEditor />} />
           <Route path="/about" element={<About />} />
         </Routes>
-      </>
-    </div>
+      </div>
   );
 };
 
