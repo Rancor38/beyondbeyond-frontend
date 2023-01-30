@@ -53,7 +53,7 @@ const MonsterEditorModal = ({ handleClose, monster, setMonster }) => {
         <MonsterModalBackdrop onClick={handleClose}>
             <motion.div
                 onClick={(e) => e.stopPropagation()}
-                className='modal edit-form'
+                className='edit-modal'
                 variants={dropIn}
                 initial='hidden'
                 animate='visible'
@@ -71,7 +71,7 @@ const MonsterEditorModal = ({ handleClose, monster, setMonster }) => {
                         <label className='edit-label'
                         htmlFor='monster'>
                     </label>
-                    <textarea className='textarea'
+                    <textarea className='monster-textarea'
                             onChange={handleChange}
                             id='description'
                             value={monster.description}

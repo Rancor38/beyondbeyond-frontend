@@ -42,7 +42,7 @@ const App = () => {
   };
 
   return (
-    <div className="app">
+    <div>
       {/* Printing the Header Component within the App */}
       <Header
         handleChange={handleChange}

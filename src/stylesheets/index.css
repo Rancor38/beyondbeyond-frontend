@@ -1,7 +1,10 @@
 @import url(./App.css);
 @import url(./About.css);
+@import url(./AddMonsterModal.css);
 @import url(./Cards.css);
 @import url(./GeneralStyles.css);
 @import url(./Header.css);
 @import url(./ModalBackdrop.css);
 @import url(./Monster.css);
+@import url(./MonsterEditorModal.css);
+@import url(./MonsterDeleteModal.css);

@@ -18,7 +18,6 @@ const AddMonsterButton = () => {
                 >
                     Add Monster
             </motion.button>
-            
             <AnimatePresence
                 initial={false}
                 exitBeforeEnter={true}
@@ -26,6 +25,7 @@ const AddMonsterButton = () => {
             >
                 {addMonsterOpen && <AddMonster addMonsterOpen={addMonsterOpen} handleClose={close} />}
             </AnimatePresence>
+            
 
 
             

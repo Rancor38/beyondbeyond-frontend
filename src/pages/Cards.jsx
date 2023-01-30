@@ -45,9 +45,7 @@ const Cards = (props) => {
 
   return (
     <>
-    <motion.h2 whileHover={{ scale: 1.05 }} whileTap={{ opacity: 0 }} className="monsterButtonMover">
-            <AddMonsterButton/>
-          </motion.h2>
+    <AddMonsterButton/>
     <section className="card-container">
       {monsters.map((monster, index) => {
         if (!monster) {

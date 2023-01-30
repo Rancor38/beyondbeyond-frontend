@@ -60,7 +60,7 @@ const AddMonster = ({ handleClose, text }) => {
         <MonsterModalBackdrop onClick={handleClose}>
             <motion.div
                 onClick={(e) => e.stopPropagation()}
-                className='modal create-form'
+                className='add-modal'
                 variants={dropIn}
                 initial='hidden'
                 animate='visible'
