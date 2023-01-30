@@ -5,8 +5,8 @@
     grid-template-rows: 2fr 1fr;
   }
   .card-art {
-    max-width: 250px;
     max-height: 250px;
+    /* mix-blend-mode: multiply; */
   }
 
   .card-container {
@@ -23,14 +23,15 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    background-color: rgba(240, 248, 255, 0.491);
+    background: var(--white);
     border-radius: 1rem 1rem 0 0;
     height: 250px;
+    overflow: hidden;
   }
 
   .card-title {
-    background-color: #742727;
-    color: white;
+    background-color: var(--purple);
+    color: var(--white);
   overflow: hidden;
     height: 200px;
     border-radius: 0 0 1rem 1rem;

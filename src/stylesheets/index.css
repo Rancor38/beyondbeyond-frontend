@@ -13,8 +13,7 @@
 :root {
     --purple: #4c5caf;
     --white: #ffffff;
-    --red: #b44646;
-    --parchment: #8a4d0f;
-
+    --blue: #4695b4;
+    --parchment: radial-gradient(circle, rgb(255, 255, 255) 0%, rgba(199, 199, 199, 0.542) 63%, rgba(184, 139, 33, 0) 100%);
   }
   

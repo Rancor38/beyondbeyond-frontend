@@ -1,11 +1,38 @@
+.monster-page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.monster-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .monster-art-big {
-    min-height: 20vh;
-    max-height: 100vh;
-    min-width: fit-content;
+    min-height: 200px;
+    max-height: 300px;
     max-width: fit-content;
+    border-radius: 16px;
   }
 
 .monster-textarea {
     width: 90vw;
     height: 50vh;
+}
+
+.monster-text {
+width: 350px;
+}
+
+.edit-and-delete {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+}
+
+.delete {
+  background-color: red;
 }

@@ -3,12 +3,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    background-color: #b44646;
-    color: white;
+    background-color: var(--blue);
+    color: var(--white);
   }
   
   .header a {
-    color: white;
+    color: var(--white);
   }
   
   .header input {

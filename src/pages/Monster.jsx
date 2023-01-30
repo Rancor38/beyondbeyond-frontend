@@ -32,14 +32,15 @@ const MonsterEditor = ({ match }) => {
     }
 
     return (
-        <section>
-                    <div>
-                        <div onDoubleClick={openEdit}>
-                    <div>{monster.name}</div>
-                    <div className='monsterText'>{monster.description}</div>
-                    <img src={monster.image} alt={monster.name} className="monster-art-big"/>
+        <section className='monster-page'>
+            <div
+                className='monster-details'
+                    onDoubleClick={openEdit}>
+                    <h1>{monster.name}</h1>
+                    <img src={monster.image} alt={monster.name} className="monster-art-big" />
+                    <div className='monster-text'>{monster.description}</div>
                         </div>
-                        <div>
+                        <div className='edit-and-delete'>
                                 <motion.button
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
@@ -48,7 +49,7 @@ const MonsterEditor = ({ match }) => {
                                 Edit
                             </motion.button>
                             <motion.button
-                                className='danger'
+                                className='delete'
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
                                 onClick={openDelete}
@@ -58,7 +59,6 @@ const MonsterEditor = ({ match }) => {
                     {editModalOpen && <MonsterEditorModal modalOpen={editModalOpen} handleClose={closeEdit} setMonster={setMonster} monster={monster} />}
                     {deleteModalOpen && <MonsterDeleteModal modalOpen={deleteModalOpen} handleClose={closeDelete} setMonster={setMonster} monster={monster} />}
                         </div>
-                    </div>
         </section>
     );
 };
