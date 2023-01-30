@@ -11,6 +11,10 @@
   align-items: center;
 }
 
+.monster-name {
+  color: inherit;
+}
+
 .monster-art-big {
     min-height: 200px;
     max-height: 300px;
@@ -18,12 +22,92 @@
     border-radius: 16px;
   }
 
+.monster-size-type-alignment {
+  color: inherit;
+}
+
+.monster-ac-hp-speed-burrow-climb-fly-swim {
+  color: inherit;
+}
+
+.monster-stats {
+  color: inherit;
+}
+
+.monster-savingthrows {
+  color: inherit;
+}
+
+.monster-skills {
+  color: inherit;
+}
+
+.monster-resistances {
+  color: inherit;
+}
+
+.monster-damage-immunities {
+  color: inherit;
+}
+
+.monster-vulnerabilities {
+  color: inherit;
+}
+
+.monster-senses {
+  color: inherit;
+}
+
+.monster-languages {
+  color: inherit;
+}
+
+.monster-cr {
+  color: inherit;
+}
+
+.monster-proficiency-bonus {
+  color: inherit;
+}
+
+.monster-abilities {
+  color: inherit;
+}
+
+.monster-actions {
+  color: inherit;
+}
+
+.monster-bonus-actions {
+  color: inherit;
+}
+
+.monster-reactions {
+  color: inherit;
+}
+
+.monster-legendary-actions {
+  color: inherit;
+}
+
+.monster-lair-actions {
+  color: inherit;
+}
+
+.monster-mythic-actions {
+  color: inherit;
+}
+
+.monster-regional-abilities {
+  color: inherit;
+}
+
 .monster-textarea {
     width: 90vw;
     height: 50vh;
 }
 
-.monster-text {
+.monster-description {
 width: 350px;
 }
 
