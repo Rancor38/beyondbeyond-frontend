@@ -9,7 +9,7 @@ const Header = (props) => {
   return (
     <>
       <h1>Bungeons and Bragons 5E</h1>
-      <header>
+      <header className="header">
         <motion.h2 whileHover={{ scale: 1.05 }} whileTap={resetChange}>
           <Link to="/">All Monsters</Link>
         </motion.h2>

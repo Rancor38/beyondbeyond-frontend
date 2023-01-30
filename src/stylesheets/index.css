@@ -1,3 +1,4 @@
+@import url(./AddMonsterButton.css);
 @import url(./App.css);
 @import url(./About.css);
 @import url(./AddMonsterModal.css);
@@ -8,3 +9,12 @@
 @import url(./Monster.css);
 @import url(./MonsterEditorModal.css);
 @import url(./MonsterDeleteModal.css);
+
+:root {
+    --purple: #4c5caf;
+    --white: #ffffff;
+    --red: #b44646;
+    --parchment: #8a4d0f;
+
+  }
+  

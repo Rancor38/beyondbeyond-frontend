@@ -9,11 +9,10 @@ const AddMonsterButton = () => {
     const open = () => setAddMonsterOpen(true)
 
     return (
-        <h1>
-                <motion.button
+        <div className='add-monster-button'>
+                <motion.button 
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    className='button'
                     onClick={() => (addMonsterOpen ? close() : open())}
                 >
                     Add Monster
@@ -29,7 +28,7 @@ const AddMonsterButton = () => {
 
 
             
-        </h1>
+        </div>
     );
 };
 
