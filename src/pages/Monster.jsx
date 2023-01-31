@@ -91,44 +91,171 @@ const MonsterEditor = ({ match }) => {
                     <p>damage immunities: {monster.damageImmunities}</p>
                     }
                 </div>
+                <div className="monster-condition-immunities">
+                {monster.conditionImmunities && 
+                    <p>condition immunities: {monster.conditionImmunities}</p>
+                    }
+                </div>
                 <div className="monster-vulnerabilities">
-
+                {monster.vulnerabilities && 
+                    <p>vulnerabilities: {monster.vulnerabilities}</p>
+                    }
                 </div>
                 <div className="monster-senses">
-
+                {monster.senses && 
+                    <p>senses: {monster.senses}</p>
+                    }
                 </div>
                 <div className="monster-languages">
-
+                {monster.languages && 
+                    <p>languages: {monster.languages}</p>
+                    }
                 </div>
                 <div className="monster-cr">
-
+                {monster.cr && 
+                    <p>cr: {monster.cr}</p>
+                    }
                 </div>
                 <div className="monster-proficiency-bonus">
-
+                {monster.proficiencyBonus && 
+                    <p>proficiency bonus: {monster.proficiencyBonus}</p>
+                    }
                 </div>
                 <div className="monster-abilities">
-
+                {monster.abilityOne && 
+                    <p>ability one: {monster.abilityOne}</p>
+                    }
+                    {monster.abilityTwo && 
+                    <p>ability two: {monster.abilityTwo}</p>
+                    }
+                    {monster.abilityThree && 
+                    <p>ability three: {monster.abilityThree}</p>
+                    }
+                    {monster.abilityFour && 
+                    <p>ability four: {monster.abilityFour}</p>
+                    }
+                    {monster.abilityFive && 
+                    <p>ability five: {monster.abilityFive}</p>
+                    }
                 </div>
                 <div className="monster-actions">
-
+                {monster.actionOne && 
+                    <p>action one: {monster.actionOne}</p>
+                    }
+                    {monster.actionTwo && 
+                    <p>action two: {monster.actionTwo}</p>
+                    }
+                    {monster.actionThree && 
+                    <p>action three: {monster.actionThree}</p>
+                    }
+                    {monster.actionFour && 
+                    <p>action four: {monster.actionFour}</p>
+                    }
+                    {monster.actionFive && 
+                    <p>action five: {monster.actionFive}</p>
+                    }
                 </div>
                 <div className="monster-bonus-actions">
-
+                {monster.bonusActionOne && 
+                    <p>bonus action one: {monster.bonusActionOne}</p>
+                    }
+                    {monster.bonusActionTwo && 
+                    <p>bonus action two: {monster.bonusActionTwo}</p>
+                    }
+                    {monster.bonusActionThree && 
+                    <p>bonus action three: {monster.bonusActionThree}</p>
+                    }
+                    {monster.bonusActionFour && 
+                    <p>bonus action four: {monster.bonusActionFour}</p>
+                    }
+                    {monster.bonusActionFive && 
+                    <p>bonus action five: {monster.bonusActionFive}</p>
+                    }
                 </div>
                 <div className="monster-reactions">
-
+                {monster.reactionOne && 
+                    <p>reaction one: {monster.reactionOne}</p>
+                    }
+                    {monster.reactionTwo && 
+                    <p>reaction two: {monster.reactionTwo}</p>
+                    }
+                    {monster.reactionThree && 
+                    <p>reaction three: {monster.reactionThree}</p>
+                    }
+                    {monster.reactionFour && 
+                    <p>reaction four: {monster.reactionFour}</p>
+                    }
+                    {monster.reactionFive && 
+                    <p>reaction five: {monster.reactionFive}</p>
+                    }
                 </div>
                 <div className="monster-legendary-actions">
-
+                {monster.legendaryActionOne && 
+                    <p>legendary action one: {monster.legendaryActionOne}</p>
+                    }
+                    {monster.legendaryActionTwo && 
+                    <p>legendary action two: {monster.legendaryActionTwo}</p>
+                    }
+                    {monster.legendaryActionThree && 
+                    <p>legendary action three: {monster.legendaryActionThree}</p>
+                    }
+                    {monster.legendaryActionFour && 
+                    <p>legendary action four: {monster.legendaryActionFour}</p>
+                    }
+                    {monster.legendaryActionFive && 
+                    <p>legendary action five: {monster.legendaryActionFive}</p>
+                    }
                 </div>
                 <div className="monster-lair-actions">
-
+                {monster.lairActionOne && 
+                    <p>lair action one: {monster.lairActionOne}</p>
+                    }
+                    {monster.lairActionTwo && 
+                    <p>lair action two: {monster.lairActionTwo}</p>
+                    }
+                    {monster.lairActionThree && 
+                    <p>lair action three: {monster.lairActionThree}</p>
+                    }
+                    {monster.lairActionFour && 
+                    <p>lair action four: {monster.lairActionFour}</p>
+                    }
+                    {monster.lairActionFive && 
+                    <p>lair action five: {monster.lairActionFive}</p>
+                    }
                 </div>
                 <div className="monster-mythic-actions">
-
+                {monster.mythicActionOne && 
+                    <p>mythicAction one: {monster.mythicActionOne}</p>
+                    }
+                    {monster.mythicActionTwo && 
+                    <p>mythicAction two: {monster.mythicActionTwo}</p>
+                    }
+                    {monster.mythicActionThree && 
+                    <p>mythicAction three: {monster.mythicActionThree}</p>
+                    }
+                    {monster.mythicActionFour && 
+                    <p>mythicAction four: {monster.mythicActionFour}</p>
+                    }
+                    {monster.mythicActionFive && 
+                    <p>mythicAction five: {monster.mythicActionFive}</p>
+                    }
                 </div>
                 <div className="monster-regional-abilities">
-
+                {monster.regionalAbilityOne && 
+                    <p>regional ability one: {monster.regionalAbilityOne}</p>
+                    }
+                    {monster.regionalAbilityTwo && 
+                    <p>regional ability two: {monster.regionalAbilityTwo}</p>
+                    }
+                    {monster.regionalAbilityThree && 
+                    <p>regional ability three: {monster.regionalAbilityThree}</p>
+                    }
+                    {monster.regionalAbilityFour && 
+                    <p>regional ability four: {monster.regionalAbilityFour}</p>
+                    }
+                    {monster.regionalAbilityFive && 
+                    <p>regional ability five: {monster.regionalAbilityFive}</p>
+                    }
                 </div>
                         </div>
                         <div className='edit-and-delete'>
