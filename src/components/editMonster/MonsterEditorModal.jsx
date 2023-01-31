@@ -32,7 +32,6 @@ const dropIn = {
 const MonsterEditorModal = ({ handleClose, monster, setMonster }) => {
 
     const { id } = useParams()
-    const navigate = useNavigate()
 
     const handleChange = (event) => {
         setMonster({ ...monster, [event.target.id]: event.target.value })
@@ -180,12 +179,6 @@ const MonsterEditorModal = ({ handleClose, monster, setMonster }) => {
                         <input onChange={handleChange}
                         id='savingThrows'
                         value={monster.savingThrows} />
-                    </div>
-                    <div className='edit-form-input'>
-                    <label className='edit-label' htmlFor='skills'>skills</label>
-                        <input onChange={handleChange}
-                        id='skills'
-                        value={monster.skills} />
                     </div>
                     <div className='edit-form-input'>
                     <label className='edit-label' htmlFor='skills'>skills</label>

@@ -1,10 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const Header = (props) => {
   const handleChange = props.handleChange;
   const searchInput = props.searchInput;
   const resetChange = props.resetChange;
+
+  const navigate = useNavigate()
 
   return (
     <>
@@ -14,7 +16,7 @@ const Header = (props) => {
           <Link to="/">All Monsters</Link>
         </motion.h2>
 
-        <motion.div whileHover={{ scale: 1.05 }} className="search">
+        <motion.div whileHover={{ scale: 1.05 }} className="search" onClick={() => {navigate('/')}}>
           <input
             type="text"
             placeholder="Search monsters..."

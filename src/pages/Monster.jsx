@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { motion } from 'framer-motion';
 import MonsterEditorModal from '../components/editMonster/MonsterEditorModal';
@@ -7,7 +7,6 @@ import MonsterDeleteModal from '../components/deleteMonster/MonsterDeleteModal';
 
 const MonsterEditor = ({ match }) => {
     const { id } = useParams()
-    const navigate = useNavigate()
 
     const [monster, setMonster] = useState(null)
     
