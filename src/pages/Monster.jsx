@@ -225,19 +225,19 @@ const MonsterEditor = ({ match }) => {
                 </div>
                 <div className="monster-mythic-actions">
                 {monster.mythicActionOne && 
-                    <p>mythicAction one: {monster.mythicActionOne}</p>
+                    <p>mythic action one: {monster.mythicActionOne}</p>
                     }
                     {monster.mythicActionTwo && 
-                    <p>mythicAction two: {monster.mythicActionTwo}</p>
+                    <p>mythic action two: {monster.mythicActionTwo}</p>
                     }
                     {monster.mythicActionThree && 
-                    <p>mythicAction three: {monster.mythicActionThree}</p>
+                    <p>mythic action three: {monster.mythicActionThree}</p>
                     }
                     {monster.mythicActionFour && 
-                    <p>mythicAction four: {monster.mythicActionFour}</p>
+                    <p>mythic action four: {monster.mythicActionFour}</p>
                     }
                     {monster.mythicActionFive && 
-                    <p>mythicAction five: {monster.mythicActionFive}</p>
+                    <p>mythic action five: {monster.mythicActionFive}</p>
                     }
                 </div>
                 <div className="monster-regional-abilities">

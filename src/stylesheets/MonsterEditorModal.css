@@ -11,3 +11,13 @@
     align-items: center;
     z-index: 2;
 }
+.edit-label {
+    color: white;
+}
+
+.edit-form-input {
+    border-bottom: solid thin white;
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
