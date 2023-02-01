@@ -19,7 +19,7 @@ const AddMonsterButton = () => {
             </motion.button>
             <AnimatePresence
                 initial={false}
-                exitBeforeEnter={true}
+                wait={true}
                 onExitComplete={() => null}
             >
                 {addMonsterOpen && <AddMonster addMonsterOpen={addMonsterOpen} handleClose={close} />}
