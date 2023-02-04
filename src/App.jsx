@@ -14,10 +14,10 @@ const App = () => {
   const url = "http://localhost:4000/monster/";
   
   //at the App level, check if the user is logged in
-  const checkForLogin = localStorage.getItem("IAmLogged?")
-  useEffect(() => {
-    console.log(checkForLogin)
-})
+//   const checkForLogin = localStorage.getItem("IAmLogged?")
+//   useEffect(() => {
+//     console.log(checkForLogin)
+// })
   
     // set search's state
     const [searchInput, setSearchInput] = useState("");

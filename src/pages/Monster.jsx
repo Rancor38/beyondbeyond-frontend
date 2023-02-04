@@ -18,8 +18,13 @@ const MonsterEditor = ({ match }) => {
     const closeDelete = () => setDeleteModalOpen(false)
     const openDelete = () => setDeleteModalOpen(true)
 
+    // a function to check for loggin
+    const checkForLogin = () => {
+        return localStorage.getItem("IAmLogged?")
+      } 
 
     useEffect(() => {
+        checkForLogin()
         axios.get(`http://localhost:4000/monster/${id}`)
             .then((res) => {
             setMonster(res.data)
@@ -29,6 +34,8 @@ const MonsterEditor = ({ match }) => {
     if (!monster) {
         return <h1>Loading...</h1>
     }
+
+    
 
     return (
         <section className='monster-page'>
@@ -258,21 +265,21 @@ const MonsterEditor = ({ match }) => {
                 </div>
                         </div>
                         <div className='edit-and-delete'>
-                                <motion.button
+                                {checkForLogin() && <motion.button
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
                                 onClick={openEdit}
                             >
                                 Edit
-                            </motion.button>
-                            <motion.button
+                            </motion.button>}
+                            {checkForLogin() && <motion.button
                                 className='delete'
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
                                 onClick={openDelete}
                             >
                                 Delete
-                    </motion.button>
+                    </motion.button>}
                     {editModalOpen && <MonsterEditorModal modalOpen={editModalOpen} handleClose={closeEdit} setMonster={setMonster} monster={monster} />}
                     {deleteModalOpen && <MonsterDeleteModal modalOpen={deleteModalOpen} handleClose={closeDelete} setMonster={setMonster} monster={monster} />}
                         </div>

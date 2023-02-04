@@ -14,8 +14,14 @@ const Cards = (props) => {
   //State for all the monsters
   const [monsters, setMonsters] = useState(null);
 
+  // a function to check local storage for the logged in token
+  const checkForLogin = () => {
+    return localStorage.getItem("IAmLogged?")
+  } 
+
   //the master fetch
   useEffect(() => {
+    checkForLogin()
     if (!searchResult) {
       //if a non-searched fetch, we do an initial fetch of what's below
       axios
@@ -28,8 +34,8 @@ const Cards = (props) => {
     }
   }, [searchResult]);
   
-  //make axios fetch call
 
+//return if no monsters array recieved 
   if (!monsters) {
     return (
       <>
@@ -38,14 +44,14 @@ const Cards = (props) => {
       </>
     );
   }
-
+// return if monster array is blank
   if (monsters && monsters.length < 1) {
     return <p>Oops! No monsters match this search.</p>;
   }
 
   return (
     <>
-    <AddMonsterButton/>
+    {checkForLogin() && <AddMonsterButton/>}
     <section className="card-container">
       {monsters.map((monster, index) => {
         if (!monster) {
