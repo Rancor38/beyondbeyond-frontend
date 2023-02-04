@@ -150,7 +150,7 @@ const AddMonster = ({ handleClose, text }) => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        axios.post(`http://localhost:4000/monster`, monster)
+        axios.post(`https://beyondbeyond.up.railway.app/monster`, monster)
             .then(() => {
             handleClose()
             })

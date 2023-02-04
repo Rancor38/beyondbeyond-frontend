@@ -34,7 +34,7 @@ const MonsterDeleteModal = ({ handleClose, text }) => {
     const navigate = useNavigate()
 
     const handleDelete = () => {
-        axios.delete(`http://localhost:4000/monster/${id}`)
+        axios.delete(`https://beyondbeyond.up.railway.app/monster/${id}`)
             .then(() => {
             navigate('/')
             })

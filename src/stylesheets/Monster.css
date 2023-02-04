@@ -6,9 +6,12 @@
 }
 
 .monster-details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  border: solid red;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, fit-content);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
 .monster-name {
@@ -16,6 +19,8 @@
 }
 
 .monster-art-big {
+  border: inherit;
+  grid-area: 1/3/2/4;
     min-height: 200px;
     max-height: 300px;
     max-width: fit-content;
@@ -23,92 +28,131 @@
   }
 
 .monster-size-type-alignment {
+  border: inherit;
+  grid-area: 1/1/2/2;
   color: inherit;
 }
 
 .monster-ac-hp-speed-burrow-climb-fly-swim {
+  border: inherit;
+  grid-area: 1/2/2/3;
   color: inherit;
 }
 
 .monster-stats {
+  border: inherit;
+  grid-area: 2/1/3/4;
   color: inherit;
 }
 
 .monster-savingthrows {
+  border: inherit;
+  grid-row: 3/1/4/2;
   color: inherit;
 }
 
 .monster-skills {
+  border: inherit;
+  grid-area: 3 / 2 / 4 / 3;
   color: inherit;
 }
 
 .monster-resistances {
+  border: inherit;
+  grid-area: 3 / 3 / 4 / 4;
   color: inherit;
 }
 
 .monster-damage-immunities {
+  border: inherit;
+  grid-area: 4 / 1 / 5 / 2;
   color: inherit;
 }
 
 .monster-vulnerabilities {
+  border: inherit;
+  grid-area: 4 / 2 / 5 / 3;
   color: inherit;
 }
 
 .monster-senses {
+  border: inherit;
+  grid-area: 4 / 3 / 5 / 4;
   color: inherit;
 }
 
 .monster-languages {
+  border: inherit;
+  grid-area: 5 / 1 / 6 / 2;
   color: inherit;
 }
 
 .monster-cr {
+  border: inherit;
+  grid-area: 5 / 2 / 6 / 3;
   color: inherit;
 }
 
 .monster-proficiency-bonus {
+  border: inherit;
+  grid-area: 5 / 3 / 6 / 4;
   color: inherit;
 }
 
+.monster-abilities-and-actions{
+  border: inherit;
+  grid-area: 6 / 1 / 7 / 4;
+
+}
+
 .monster-abilities {
+  border: inherit;
   color: inherit;
 }
 
 .monster-actions {
+  border: inherit;
   color: inherit;
 }
 
 .monster-bonus-actions {
+  border: inherit;
   color: inherit;
 }
 
 .monster-reactions {
+  border: inherit;
   color: inherit;
 }
 
 .monster-legendary-actions {
+  border: inherit;
   color: inherit;
 }
 
 .monster-lair-actions {
+  border: inherit;
   color: inherit;
 }
 
 .monster-mythic-actions {
+  border: inherit;
   color: inherit;
 }
 
 .monster-regional-abilities {
+  border: inherit;
   color: inherit;
 }
 
 .monster-textarea {
+  border: inherit;
     width: 90vw;
     height: 50vh;
 }
 
 .monster-description {
-width: 350px;
+  border: inherit;
 }
 
 .edit-and-delete {

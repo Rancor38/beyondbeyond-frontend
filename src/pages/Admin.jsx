@@ -16,7 +16,7 @@ const Admin = () => {
 
     const logIn = (e) => {
         e.preventDefault()
-        axios.post('http://localhost:4000/auth/login', payload).then((res) => {
+        axios.post('https://beyondbeyond.up.railway.app/auth/login', payload).then((res) => {
             localStorage.setItem("IAmLogged?", res.data.isLoggedIn)
         });
         if (localStorage.getItem('IAmLogged?')) {

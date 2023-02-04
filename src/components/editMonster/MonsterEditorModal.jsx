@@ -39,7 +39,7 @@ const MonsterEditorModal = ({ handleClose, monster, setMonster }) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.put(`http://localhost:4000/monster/${id}`, monster)
+        axios.put(`https://beyondbeyond.up.railway.app/monster/${id}`, monster)
             .then(() => { handleClose() })
             // .then(() => {
             //     setTimeout(() => {

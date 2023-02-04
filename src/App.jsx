@@ -11,7 +11,7 @@ import Admin from "./pages/Admin";
 
 const App = () => {
     // Const variables for the SRD Monsters, these will be passed down as props to the Cards component as 'url'.
-  const url = "http://localhost:4000/monster/";
+  const url = "https://beyondbeyond.up.railway.app/monster/";
   
   //at the App level, check if the user is logged in
 //   const checkForLogin = localStorage.getItem("IAmLogged?")
@@ -23,7 +23,7 @@ const App = () => {
     const [searchInput, setSearchInput] = useState("");
     const [searchResult, setSearchResult] = useState("");
 
-    const searchUrl = `http://localhost:4000/monster/name/${searchInput}`;
+    const searchUrl = `https://beyondbeyond.up.railway.app/monster/name/${searchInput}`;
 
     const fetchSearch = () => {
         if (searchInput.length <= 1) {
